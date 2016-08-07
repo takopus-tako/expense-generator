@@ -12,8 +12,10 @@
 
 </head>
 <body>
-<div id="result" class="color1">?</div>
+<div id="person" class="color1">?</div>
+<div id="reason" class="">reason</div>
 <div id="btn">Today's Expens</div>
+
 <script type="text/javascript">
     (function () {
         "use strict";
@@ -27,20 +29,28 @@
             //0 - 0.9999....
             //0 - 3.9999....
             // 0 - 3
-            var staffName = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
-            var result = Math.floor(Math.random() * staffName.length);
-            console.log('result is ' + result);
 
-            $('#result').removeClass('color1');
+//            get person
+            var staffName = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
+            var person = Math.floor(Math.random() * staffName.length);
+            console.log('person is ' + person);
+
+            $('#person').removeClass('color1');
             for (var i = 0; i < staffName.length; i++) {
                 console.log("i'm gonna remove" + staffName[i]);
-                $('#result').removeClass(staffName[i]);
+                $('#person').removeClass(staffName[i]);
             }
-            $('#result').addClass(staffName[result]);
+            $('#person').addClass(staffName[person]);
+
+            // get reason
+
+            var reasons = ['shopify marketing', 'wre marketing', 'recruiting', 'monthly reconcilation', 'toilet cleaning'];
+            var reason = Math.floor(Math.random() * reasons.length);
 
 
-            //document.getElementById('result').innerHTML = '下痢';
-            document.getElementById('result').innerHTML = staffName[result];
+            //document.getElementById('person').innerHTML = '下痢';
+            document.getElementById('person').innerHTML = staffName[person];
+            document.getElementById('reason').innerHTML = reasons[reason];
         });
         document.getElementById('btn').addEventListener('mousedown', function () {
             this.className = 'pushed';
