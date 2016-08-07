@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>おみくじ</title>
+    <meta charset="utf-8">
+    <title>おみくじ</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
 
+    <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
-  <div id="result" class="color1">?</div>
-  <div id="btn">Today's Expens</div>
-  <script type="text/javascript">
-  (function(){
-    "use strict";
-    document.getElementById('btn').addEventListener('click',function(){
-      console.log('clicked');
+<div id="result" class="color1">?</div>
+<div id="btn">Today's Expens</div>
+<script type="text/javascript">
+    (function () {
+        "use strict";
+        document.getElementById('btn').addEventListener('click', function () {
+            console.log('clicked');
 
-      // 0 - n
-      // Math.floor(Math.randam() * (n + 1))
-      // 0 - 3
-      // Math.floor(Math.random() * 4)
-      //0 - 0.9999....
-      //0 - 3.9999....
-      // 0 - 3
-      var staffName = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
-      var result = Math.floor(Math.random() * staffName.length);
-      console.log('result is ' + result);
+            // 0 - n
+            // Math.floor(Math.randam() * (n + 1))
+            // 0 - 3
+            // Math.floor(Math.random() * 4)
+            //0 - 0.9999....
+            //0 - 3.9999....
+            // 0 - 3
+            var staffName = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
+            var result = Math.floor(Math.random() * staffName.length);
+            console.log('result is ' + result);
 
-      $('#result').removeClass('color1');
-      for(var i=0; i<staffName.length; i++)  {
-        console.log("i'm gonna remove"  + staffName[i]);
-        $('#result').removeClass(staffName[i]);
-      }
-      $('#result').addClass(staffName[result]);
-
-
+            $('#result').removeClass('color1');
+            for (var i = 0; i < staffName.length; i++) {
+                console.log("i'm gonna remove" + staffName[i]);
+                $('#result').removeClass(staffName[i]);
+            }
+            $('#result').addClass(staffName[result]);
 
 
-      //document.getElementById('result').innerHTML = '下痢';
-      document.getElementById('result').innerHTML = staffName[result];
-      });
-    document.getElementById('btn').addEventListener('mousedown', function(){
-      this.className = 'pushed';
-    });
-    document.getElementById('btn').addEventListener('mouseup',function(){
-      this.className = '';
-    });
-  })();
+            //document.getElementById('result').innerHTML = '下痢';
+            document.getElementById('result').innerHTML = staffName[result];
+        });
+        document.getElementById('btn').addEventListener('mousedown', function () {
+            this.className = 'pushed';
+        });
+        document.getElementById('btn').addEventListener('mouseup', function () {
+            this.className = '';
+        });
+    })();
 </script>
-
-
-
 </body>
 </html>
