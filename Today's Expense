@@ -89,22 +89,22 @@
       //0 - 0.9999....
       //0 - 3.9999....
       // 0 - 3
-      var results = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
-      var result = Math.floor(Math.random() * results.length);
+      var staffName = ['Jeremy', 'Sabina', 'Mika', 'Robert', 'Anonymous'];
+      var result = Math.floor(Math.random() * staffName.length);
       console.log('result is ' + result);
 
       $('#result').removeClass('color1');
-      for(var i=0; i<results.length; i++)  {
-        console.log("i'm gonna remove"  + results[i]);
-        $('#result').removeClass(results[i]);
+      for(var i=0; i<staffName.length; i++)  {
+        console.log("i'm gonna remove"  + staffName[i]);
+        $('#result').removeClass(staffName[i]);
       }
-      $('#result').addClass(results[result]);
+      $('#result').addClass(staffName[result]);
 
 
 
 
       //document.getElementById('result').innerHTML = '下痢';
-      document.getElementById('result').innerHTML = results[result];
+      document.getElementById('result').innerHTML = staffName[result];
       });
     document.getElementById('btn').addEventListener('mousedown', function(){
       this.className = 'pushed';
