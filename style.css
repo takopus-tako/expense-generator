@@ -1,0 +1,63 @@
+
+body {
+    background: #e0e0e0;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-fammily: Arial, sans-serif;
+}
+
+#result {
+    margin: 30px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    line-height: 180px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgb(0, 0, 0, 0.3);
+}
+
+.color1 {
+    background: #grey;
+}
+
+.Jeremy {
+    background: yellow;
+}
+
+.Anonymous {
+    background: red;
+}
+
+.Robert {
+    background: pink;
+}
+
+.Sabina {
+    background: green;
+}
+
+.Mika {
+    background: black;
+}
+
+#btn {
+    margin: 0 auto;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #3BC1A2;
+    box-shadow: 0 4px 0 #28A25F;
+    cursor: pointer;
+}
+
+#btn:hover {
+    opacity: 0.8;
+}
+
+#btn.pushed {
+    margin-top: 32px;
+    box-shadow: 0 2px 0 #28A25F;
+
+}
